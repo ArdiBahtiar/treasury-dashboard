@@ -1,0 +1,7 @@
+{
+    "require": {
+        "ramsey/uuid": "^4.7",
+        "brick/math": "^0.12.1",
+        "ramsey/collection": "^2.0"
+    }
+}

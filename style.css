@@ -1,0 +1,46 @@
+* {
+    font-family: sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    /* height: 100%; */
+}
+
+form input {
+    margin-top: 10px;
+}
+
+.landing-about {
+    text-align: center;
+}
+
+.back-button {
+    font: bold 50px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.claimed {
+    font: bold 20px Arial;
+    margin-bottom: 60px;
+}
