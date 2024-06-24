@@ -8,7 +8,7 @@ use Ramsey\Uuid\Nonstandard\Uuid;
 $date = date('Y-m-d');
 $tommorrow = date('Y-m-d', strtotime("tomorrow"));
 $uuid = Uuid::uuid4()->toString();
-// $row = mysqli_fetch_assoc($queryy);
+$row = mysqli_fetch_assoc($queryy);
 // var_dump($row);
 $delete = "DELETE FROM ticket_pools WHERE folio_id = '$vocer'";
 $orders = "INSERT INTO orders (order_id, order_date, visit_date, cancelled, merchant_info, cust_name, cust_email, cust_phone) 
