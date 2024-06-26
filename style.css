@@ -44,3 +44,7 @@ form input {
     font: bold 20px Arial;
     margin-bottom: 60px;
 }
+
+.label-landingOrder {
+    text-align: center;
+}

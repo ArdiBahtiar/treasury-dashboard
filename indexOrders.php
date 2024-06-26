@@ -1,4 +1,4 @@
-<?php
+<?php 
 include('config.php');
 require 'vendor/autoload.php';
 use Ramsey\Uuid\Nonstandard\Uuid;
@@ -8,6 +8,7 @@ $options = mysqli_query($conn, $queryCatalogs);
 $date = date('Y-m-d');
 $folioList = array();
 // $counter2 = $counter;
+
 
 session_start();
 
@@ -45,8 +46,14 @@ if(isset($_POST['submit']))
     $_SESSION['folioList'] = $folioList;
     header("Location: landingOrders.php");
 }
-
 ?>
+
+
+<?php
+// if (!defined('SHOW_FORM')) {
+//     define('SHOW_FORM', true);
+// }
+// ?>
 
 <!DOCTYPE html>
 <html>

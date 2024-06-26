@@ -1,7 +1,10 @@
 <?php
 include('config.php');
 include('indexOrders.php');
-// session_start();
+// if (session_status() == PHP_SESSION_NONE) {
+//     session_start();
+// }
+// define('SHOW_FORM', false);
 
 $counter = isset($_SESSION['counter']) ? $_SESSION['counter'] : 0;
 $folioList = isset($_SESSION['folioList']) ? $_SESSION['folioList'] : array();
@@ -16,14 +19,13 @@ $folioList = isset($_SESSION['folioList']) ? $_SESSION['folioList'] : array();
 </head>
 <body>
 
-<div class="container">
-    <img src="image/kidzania-logo.jpg" alt="kidzania" width="100px">
-    <img src="image/tlclogo.jpg" alt="tlc" width="100px">
+<div class="label-landingOrder">
+    <br><br><br><h2>FOLIO ID YANG DI ORDER</h2>
 </div>
  <?php
  for($echo = 0; $echo < $counter; $echo++)
  {
-     echo "'$folioList[$echo]' <br>";
+     echo "<p class='label-landingOrder'>$folioList[$echo]<p>";
  }
  ?> 
 <a class="back-button" href="indexOrders.php">Kembali ke Halaman Awal</a>
