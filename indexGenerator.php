@@ -15,8 +15,9 @@ if(isset($_POST['submit']))
 
     for($i = 0; $i < $counter; $i++)
     {
+        // $auto_increment = "SELECT MAX(id) FROM ticket_pools";
         $uuid = Uuid::uuid4()->toString(); // Generate a new UUID for each iteration
-        $insert = "INSERT INTO ticket_pools (catalog_id, folio_id) VALUES('$category', '$uuid')";
+        $insert = "INSERT INTO ticket_pools (catalog_id, folio_id) VALUES('$category', '$uuid')";   // Don't forget to AUTO_INCREMENT id
         mysqli_query($conn, $insert);
     }
 }
@@ -32,16 +33,16 @@ if(isset($_POST['submit']))
 <body>
 <div class="container">
     <img src="image/kidzania-logo.jpg" alt="kidzania" width="100px">
-    <form action="table.php">
-        <input type="submit" value="Voucher yang sudah di-Klaim" class="claimed">
+    <form action="index.php">
+        <input type="submit" value="Kembali ke Menu Utama" class="claimed">
     </form>
-    <img src="image/tlclogo.jpg" alt="tlc" width="100px">
+    <img src="" alt="" width="100px">
 </div>
 <form method="post">
-    <label>Berapa Kali? :</label>
+    <label>Bikin Berapa Ticket? :</label>
     <input type="number" name="counter" value="">
-
-    <label>Generate Ticket</label>
+<br>
+    <label>Ticket Catalog: </label>
     <select name="category" id="category">
     <?php 
         while($category = mysqli_fetch_array($options, MYSQLI_ASSOC)):;
@@ -52,7 +53,7 @@ if(isset($_POST['submit']))
     <?php endwhile; ?>
     </select>
 
-    <input type="submit" name="submit" value="Submit">
+    <input type="submit" name="submit" value="Generate">
 </form>
 </body>
 </html>

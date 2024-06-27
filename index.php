@@ -2,7 +2,7 @@
 <html>
     
 <head>
-    <title>Postgre API</title>
+    <title>Postgre API Main Index</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,12 +11,15 @@
     <form action="table.php">
         <input type="submit" value="Voucher yang sudah di-Klaim" class="claimed">
     </form>
-    <img src="image/tlclogo.jpg" alt="tlc" width="100px">
+    <img src="" alt="" width="100px">
 </div>
-<form action="validate.php" method="get">
-Kode Voucher: <input type="text" name="vocer" value="<?php if(isset($_SESSION['vocer']));?>">
-<input type="submit" name="save" value="Submit">
-</form>
+
+<a href="indexOrders.php" class="button-index">Order Ticket</a>
+<a href="indexRegister.php" class="button-index">Register Ticket</a>
+<a href="indexActivator.php" class="button-index">Activate Ticket</a>
+<a href="indexExpired.php" class="button-index">Update Expired Date</a>
+<a href="indexCatalog.php" class="button-index">Create New Catalog</a>
+<a href="indexGenerator.php" class="button-index">Generate Ticket by Catalog</a>
 
 </body>
 </html>
